@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend API for the product recommender system.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js"
   },
