@@ -72,13 +72,14 @@ The Node.js controller uses the `dominant_factor` from Python to select the appr
 
 2. **Start Node.js API Gateway (Port 5000):**
 
-Action: Launches the main API server that coordinates Python and the LLM.
+    Action: Launches the main API server that coordinates Python and the LLM.
 
-cd backend
-npm start
+    ```bash
+    cd backend
+    npm start
 
 3. **Launch Frontend**
 
-Action: Open the final file in your web browser.
+    Action: Open the final file in your web browser.
 
-Open frontend/index.html in your browser.
+    Open frontend/index.html in your browser.
