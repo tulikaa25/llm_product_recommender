@@ -52,7 +52,6 @@ The Node.js controller uses the `dominant_factor` from Python to select the appr
 
 ## VI. User View 
 ![User View Dashboard](input.png)
-
 ![Recommendation Response](output.png)      
 
 ## 🚀 Setup and Execution Instructions
