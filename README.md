@@ -54,6 +54,8 @@ The Node.js controller uses the `dominant_factor` from Python to select the appr
 ![User View Dashboard](input.png)
 ![Recommendation Response](output.png)      
 
+## VI. Backend response testing using Postman
+![response](postman.png)
 ## 🚀 Setup and Execution Instructions
 
 ### Prerequisites (For Running Locally)
