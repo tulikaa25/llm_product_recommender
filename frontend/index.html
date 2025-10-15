@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Recommender</title>
+    
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Sets a clean, modern font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fb; /* Light background to match React component */
+        }
+    </style>
+    
+    <!-- 1. Load React and ReactDOM Libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- 2. Load Babel for JSX Translation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- 3. Load Lucide Icons (Used by the components) -->
+    <script type="module">
+        import { createReactComponent } from 'https://esm.sh/lucide-react@0.407.0/createReactComponent';
+        // Define all used icons globally under the 'lucide' object for Babel to access
+        window.lucide = {
+            RefreshCcw: createReactComponent('RefreshCcw', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"/><path d="M21 13a9 9 0 1 1-3-7"/><path d="M21 13a9 9 0 1 1-3-7"/></svg>'),
+            ShoppingCart: createReactComponent('ShoppingCart', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="20" r="1"/><circle cx="17" cy="20" r="1"/><path d="M2 2h3l2 12h11l3-8H7"/></svg>'),
+            User: createReactComponent('User', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>'),
+            MessageSquare: createReactComponent('MessageSquare', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'),
+            Heart: createReactComponent('Heart', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.23 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3.48.97-5.5 2-2.02-1.03-3.74-2-5.5-2A5.5 5.5 0 0 0 2 8.5c0 2.27 1.51 4.04 3 5.5l7 7 7-7z"/></svg>'),
+            CheckCircle: createReactComponent('CheckCircle', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M9 11l3 3L22 4"/></svg>'),
+            Loader: createReactComponent('Loader', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>'),
+            UserCircle: createReactComponent('UserCircle', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a4 4 0 0 0-2.31-3.79 6 6 0 1 0-7.38 0A4 4 0 0 0 6 20"/></svg>'),
+        };
+    </script>
+</head>
+<body>
+    <!-- Root element where the React App will be rendered -->
+    <div id="root"></div>
+    
+    <!-- 4. Load the Application Logic -->
+    <script type="text/babel" src="./src/App.jsx"></script>
+
+    <script type="text/babel">
+        // Standard code to mount the App component found in App.jsx
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        
+        // Safety check: wait for the global App component to be available
+        const renderApp = () => {
+            if (window.App) {
+                root.render(<window.App />);
+            } else {
+                setTimeout(renderApp, 50); // Retry quickly
+            }
+        };
+        renderApp();
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Flask
+pymongo[srv]  
+scikit-learn
+pandas
+numpy
+scikit-surprise

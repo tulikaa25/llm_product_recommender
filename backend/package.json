@@ -1,18 +1,29 @@
 {
   "name": "product-recommender-backend",
   "version": "1.0.0",
-  "description": "Backend API for the product recommender system.",
+  "description": "Node.js API Gateway for Hybrid LLM Recommender",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "data:import": "node seeder.js",
+    "data:destroy": "node seeder.js -d"
   },
+  "keywords": [
+    "node",
+    "express",
+    "mongoose",
+    "recommendation"
+  ],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.5.0",
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@google/genai": "^0.1.0",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
   }
 }
+
