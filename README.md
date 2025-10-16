@@ -105,4 +105,4 @@ The Node.js controller uses the `dominant_factor` from Python to select the appr
     Open frontend/index.html in your browser.
 
 ## 📹 Demo Video
-<iframe src="https://drive.google.com/file/d/1l7GK7iPPRUdwWkiBKwYsWZWoQN1o00dA/preview" width="640" height="480" allowfullscreen></iframe>
+"https://drive.google.com/file/d/1l7GK7iPPRUdwWkiBKwYsWZWoQN1o00dA/view?usp=drivesdk"
