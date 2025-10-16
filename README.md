@@ -103,3 +103,6 @@ The Node.js controller uses the `dominant_factor` from Python to select the appr
     Action: Open the final file in your web browser.
 
     Open frontend/index.html in your browser.
+
+## 📹 Demo Video
+Watch the project demonstration: [Click here to view the video](https://drive.google.com/file/d/1l7GK7iPPRUdwWkiBKwYsWZWoQN1o00dA/view?usp=drivesdk)
